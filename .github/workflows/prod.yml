@@ -21,17 +21,17 @@ jobs:
       - name: Login Docker Hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
-        run: docker build -t gomesw/deploy_ghactions .
+        run: docker build -t gomesw82/deploy_send_email_ghactions .
       - name: Push image docker
-        run: docker push gomesw/deploy_ghactions
+        run: docker push gomesw82/deploy_send_email_ghactions
 
   deploy:
     needs: build
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull gomesw/deploy_ghactions:latest
+        run: docker pull gomesw82/deploy_send_email_ghactions:latest
       - name: Remove docker container
         run: docker rm -f deploy_ghactions
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name deploy_ghactions gomesw/deploy_ghactions
+        run: docker run -d -p 8080:8080 --name deploy_send_email_ghactions gomesw82/deploy_send_email_ghactions
