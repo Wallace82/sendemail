@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mhds</groupId>
-	<artifactId>sendemail</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>deploy_send_email_ghactions</artifactId>
+	<version>1.0.0</version>
 	<name>sendemail</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
