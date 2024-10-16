@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class Email {
-
     @GetMapping("/send")
     public ResponseEntity<?> send(){
         return ResponseEntity.ok("Enviado comsucesso");
