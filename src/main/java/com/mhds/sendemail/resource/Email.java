@@ -13,7 +13,4 @@ public class Email {
     public ResponseEntity<?> send(){
         return ResponseEntity.ok("Enviado comsucesso");
     }
-
-    
-
 }
